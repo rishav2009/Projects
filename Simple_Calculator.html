@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Simple Calculator </title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-color: black;
+            }
+            #container{
+                border: groove yellow 8px;
+                margin: auto;
+                width: 300px;
+            }
+            label{
+                margin-left: 33%;
+                color: white;
+                font-size: 20px;
+                font-family: fugaz one;
+            }
+            #center{
+                color: white;
+                text-align: center;
+                font-family: Times New Roman;
+            }
+            input{
+                margin-left: 65px;
+                width: 150px;
+                text-align: center;
+                font-family: cursive;
+            }
+            button{
+                margin-left: 600px;
+                height: 25pt;
+                width: 150px;
+                font-family: Lobster;
+                font-size: 20px;
+                background-color: blue;
+                transition: all 0.9s;
+                border-radius: 30px;
+            }
+            select{
+                margin-bottom: 20px;
+                margin-left: 50px;
+                width: 190px;
+                height: 30px;
+                font-family: Cambria;
+                font-size: 15px;
+                transition: all 0.4s;
+            }
+            option{
+                color: white;
+            }
+            #result{
+                text-align: center;
+                color: white;
+            }
+            h1{
+                color: white;
+                text-align: center;
+                font-family: Sigmar One;
+            }
+            button:hover{
+                width: 160px;
+                height: 30pt;
+            }
+            select:focus{
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1> Calculator </h1>
+
+        <div    id="container">
+            
+                <label> Number 1 </label>   <br><br>
+                <input type="text"  id="num1"  placeholder="Enter 1st Number">
+                <br><br>
+
+                <label  class="center"> Number 2 </label>   <br><br>
+                <input type="text"  id="num2"  placeholder="Enter 2nd Number">
+                <br><br><br>
+
+                <select  id="options">
+                    <option value="" disabled   selected> ---Select the Operation--- </option>
+                    <option value="add"> Addition( + ) </option>
+                    <option value="minus"> Substraction( - ) </option>
+                    <option value="multiply"> Multiplication( X ) </option>
+                    <option value="divide"> Divition( / ) </option>
+                </select>   <br>
+            </div>
+
+                <h1     id="center"> Result is: </h1>
+
+                <h2  id="result"></h2>
+                <br>
+
+                <button onclick="calculate()"> Calculate </button>
+
+        
+
+        <script>
+
+            function calculate()
+
+            {
+                var num1 = Number ( document.getElementById( "num1" ).value );
+                var num2 = Number ( document.getElementById( "num2" ).value );
+                var option =  document.getElementById( "options" ).value;
+                var result;
+                
+                if( option == "add")              {  result = num1 + num2  }
+                else if( option == "minus")       {  result = num1 - num2  }
+                else if( option == "multiply")    {  result = num1 * num2  }
+                else if( option == "divide")      {  result = num1 / num2  }
+
+                document.getElementById( "result" ).innerHTML = result;
+            }
+
+        </script>
+    </body>
+</html>
