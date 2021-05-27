@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Calculator in JS </title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-color: black;
+            }
+            h1{
+                text-align: center;
+                color: white;
+                font-family: sigmar one
+            }
+            table{
+                margin: auto;
+                margin-top: 5%;
+                border: yellow solid 5px;
+                border-radius: 5%;
+            }
+            td{
+                border: yellow solid 3px;
+            }
+            button{
+                width: 100%;
+                font-family: Fugaz One;
+            }
+            #result{
+                width: 96%;
+                font-family: fugaz one;
+            }
+        </style>
+    </head>
+    <body>
+
+        <table  cellspacing="20px">
+
+            <h1>  Calculator  </h1>
+
+            <tr>
+                <td   colspan="4">    <input type="text"    id="result">     </td>
+            </tr>
+
+            <tr>
+                <td>     <button  onclick="document.getElementById('result').value += 7 ;">    7   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value += 8 ;">    8   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value += 9 ;">    9   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value += '*' ">    *   </button>   </td>
+            </tr>
+
+            <tr>
+                <td>     <button  onclick="document.getElementById('result').value += 4">    4   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value += 5">    5   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value += 6">    6   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value += '-' ">    -   </button>   </td>
+            </tr>
+
+            <tr>
+                <td>     <button  onclick="document.getElementById('result').value += 1">    1   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value += 2">    2   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value += 3">    3   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value += '+' ">    +   </button>   </td>
+            </tr>
+
+            <tr>
+                <td>     <button  onclick="document.getElementById('result').value += '/' ">    /   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value += 0">       0   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value += '.' ">    .   </button>   </td>
+                <td>     <button  onclick="document.getElementById('result').value = eval(document.getElementById('result').value) ">    =   </button>   </td>
+            </tr>
+
+            <tr>
+                <td colspan="4"    id="C">    <button onclick="document.getElementById('result').value = '' "> Clear </button>    </td>
+            </tr>
+
+        </table>
+        
+        <script>
+
+
+
+        </script>
+
+    </body>
+</html>
