@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Clock for all Time Zone </title>
+        <link rel="icon" href="Clock Logo.jpg">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-image: url(Background-Image.png);
+                background-size: 1400px 700px;
+            }
+            h1{
+                font-family: Sigmar One;
+                color: white;
+                text-align: center;
+            }
+            select{
+                margin-left: 570px;
+                width: 200px;
+                background-color: rgba(0, 0, 0, 0.205);
+                color: white;
+                font-family: Lobster;
+                font-size: 20px;
+                text-align: center;
+                border-radius: 50px;
+                height: 3pc;
+                border-bottom: yellow solid 5px;
+                border-left: blue solid 5px;
+                border-top: green solid 5px;
+                border-right: red solid 5px;
+                outline: none;
+                transition: all 985ms;
+            }
+            #display{
+                border: red groove 12px;
+                background-color: rgba(0, 0, 0, 0.411);
+                color: orange;
+                font-family: Squada One;
+                text-align: center;
+                font-size: 60px;
+                margin-top: 20px;
+                width: 70%;
+                margin-left: 175px;
+                border-radius: 100px;
+            }
+            select:focus{
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1> Select the Time Zone </h1>
+
+        <select id="country">
+            <option value="Asia/Dubai"> Dubai    </option>
+            <option value="Asia/Kolkata"> India    </option>
+            <option value="Europe/London"> UK       </option>
+            <option value="America/New_York"> New York </option>
+            <option value="Asia/Kathmandu"> Nepal </option>
+            <option value="America/Chicago"> Chicago </option>
+        </select>
+
+        <!-- <button     onclick="clock()"> Show Time </button> -->
+
+        <div id="display"></div>
+
+        <script>
+
+            function clock()
+            {
+                var x = new Date() ;
+                var zone = document.getElementById( "country" ).value ;
+
+                var time = x.toLocaleString( "en-US", { timeZone : zone } ) ;
+
+                document.getElementById( "display" ).innerHTML = time ;
+            }
+
+            setInterval( clock,1000 )
+
+        </script>
+    </body>
+</html>
